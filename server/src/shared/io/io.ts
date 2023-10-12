@@ -41,7 +41,7 @@ export function getStatus(target: Request | Response) {
  * @param data The IO data to set.
  * @param status The IO status to set, defaults to OK.
  */
-export function set(target: any, data: any, status = Status.OK) {
+export function set(target: any, data: any, status: string = Status.OK) {
   if (!target.locals) {
     target.locals = {};
   }
