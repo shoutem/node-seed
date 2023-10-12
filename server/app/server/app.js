@@ -23,13 +23,10 @@ import { ioErrorAdapter } from '../../src/shared/io';
  */
 // import { authenticate } from '../../src/shared/auth';
 // import { loadAuthenticatedAccount } from '../../src/account/middleware';
-// import Raven from '../../src/shared/sentry';
 
 const app = express();
 app.disable('x-powered-by');
 app.enable('trust proxy', true);
-
-// app.use(Raven.requestHandler());
 
 app.use(cors());
 app.options('*', cors());
@@ -50,8 +47,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use('/', router);
 
 app.use(defaultNotFound());
-
-// app.use(Raven.errorHandler());
 
 const errorHandlerOptions = {
   showFullError: errorConfig.showFullError,

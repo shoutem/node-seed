@@ -1,14 +1,13 @@
 {
   "sourceMaps": "both",
-  "presets": [
-    ["env", {
-      "targets": {
-        "node": "current"
-      }
-    }]
-  ],
+  "presets": ["@babel/preset-env"],
   "plugins": [
-    "transform-object-rest-spread",
-    "transform-decorators-legacy"
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
   ]
 }

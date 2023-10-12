@@ -1,6 +1,7 @@
 /* eslint no-console:0 */
-import app from './app';
+import 'dotenv/config';
 import http from 'http';
+import app from './app';
 import database from '../../src/shared/db/database';
 import { logger } from '../../src/shared/logging';
 
